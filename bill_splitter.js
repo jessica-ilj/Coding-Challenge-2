@@ -18,3 +18,14 @@ const examplebill = 100;  // Testing the function with a bill value of $100
 const exampletip = calculateTip(examplebill);
 console.log("Bill= $" + examplebill + ", tip= $" + exampletip);
 
+//Task 4- utilize arrays
+const billsa = [275, 40, 430]; //array of bills with provided dataset
+const billsb = [125, 555, 44];
+
+const tipsa = billsa.map(bill => calculateTip(bill)); // the array of tips for billsa
+const totalsa = billsa.map((bill, index) => bill + tipsa[index]); // the array totals for billsa
+
+
+const tipsb = billsb.map(bill => calculateTip(bill)); //the array of tips for billsb
+const totalsb = billsb.map((bill, index) => bill + tipsb[index]); //the array of totals for billsb
+
